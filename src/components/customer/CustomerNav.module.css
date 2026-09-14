@@ -1,0 +1,116 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--text-strong);
+  text-decoration: none;
+  padding: var(--space-2) 0;
+  transition: color var(--dur) var(--ease-out);
+  position: relative;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.navLink.active {
+  color: var(--brand);
+}
+
+.accountAction {
+  margin-left: auto;
+}
+
+.loginLink {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-strong);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--dur) var(--ease-out);
+}
+
+.loginLink:hover {
+  background-color: var(--slate-100);
+  text-decoration: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 1024px) {
+  .nav {
+    position: fixed;
+    top: 68px; /* Below header */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-6) var(--gutter);
+    gap: var(--space-4);
+    transform: translateX(-100%);
+    transition: transform var(--dur) var(--ease-out);
+    overflow-y: auto;
+    z-index: 40;
+  }
+
+  .nav.mobileOpen {
+    transform: translateX(0);
+  }
+
+  .navList {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+  }
+
+  .navItem {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .navLink {
+    display: block;
+    width: 100%;
+    padding: var(--space-4) 0;
+    font-size: var(--text-base);
+  }
+
+  .accountAction {
+    margin-left: 0;
+    margin-top: var(--space-6);
+    width: 100%;
+  }
+
+  .loginLink {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: var(--space-3);
+    background-color: var(--slate-100);
+  }
+}

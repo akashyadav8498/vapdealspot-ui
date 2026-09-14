@@ -1,0 +1,75 @@
+.searchForm {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+}
+
+.heroForm {
+  max-width: 100%;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 6px 0 var(--space-4);
+  background-color: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
+  gap: var(--space-2);
+}
+
+.heroWrapper {
+  height: 64px;
+  padding: 0 var(--space-2) 0 var(--space-5);
+  box-shadow: var(--shadow-lg);
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px var(--brand-soft), var(--shadow-md);
+}
+
+.icon {
+  color: var(--text-faint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  min-width: 0;
+  height: 100%;
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text-strong);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.heroInput {
+  font-size: var(--text-lg);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.button {
+  height: 40px;
+  padding: 0 18px;
+}
+
+.heroButton {
+  height: 48px;
+  font-size: var(--text-base);
+  padding: 0 26px;
+}

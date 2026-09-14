@@ -1,0 +1,86 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  gap: 1rem;
+}
+
+.row:hover:not(.outOfStock) {
+  border-color: var(--color-slate-300);
+}
+
+.bestOffer {
+  border-color: var(--color-coral-300);
+  background-color: var(--color-coral-50);
+}
+
+.outOfStock {
+  opacity: 0.6;
+  background-color: var(--color-slate-50);
+}
+
+.merchantInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.merchantIcon {
+  font-size: 1.25rem;
+}
+
+.merchantName {
+  font-weight: 500;
+  color: var(--color-slate-900);
+}
+
+.priceInfo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+.price {
+  font-family: var(--font-bricolage);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+}
+
+.actionInfo {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.cta {
+  min-width: 120px;
+  justify-content: center;
+}
+
+@media (max-width: 639px) {
+  .row {
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .merchantInfo {
+    flex: 100%;
+  }
+  
+  .priceInfo {
+    flex: 1;
+    justify-content: flex-start;
+  }
+  
+  .actionInfo {
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
