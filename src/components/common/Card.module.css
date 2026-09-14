@@ -1,0 +1,15 @@
+.card {
+  background-color: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sunken {
+  background-color: var(--surface-sunken);
+  box-shadow: none;
+  border-color: transparent;
+}

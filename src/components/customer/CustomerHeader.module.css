@@ -1,0 +1,136 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--dur) var(--ease-out);
+}
+
+.isScrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  gap: var(--space-6);
+  padding: 0;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  margin-left: -8px;
+  color: var(--text-strong);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  outline: none;
+  border: none;
+  /* Prevent any browser-default focus rectangle from appearing as a box */
+}
+
+.logo {
+  object-fit: contain;
+  width: auto;
+  height: 36px;
+}
+
+.logoDark {
+  display: none;
+}
+
+:global([data-theme="dark"]) .logoLight {
+  display: none;
+}
+
+:global([data-theme="dark"]) .logoDark {
+  display: block;
+}
+
+.searchContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.desktopNav {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.themeToggleContainer {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.mobileNavOverlay {
+  display: none;
+}
+
+/* Tablet / Small Desktop */
+@media (max-width: 1024px) {
+  .desktopNav {
+    display: none;
+  }
+  
+  .burger {
+    display: flex;
+  }
+  
+  .mobileNavOverlay {
+    display: block;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .inner {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    height: auto;
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-3);
+  }
+
+  .header {
+    height: auto;
+  }
+
+  .burger {
+    order: 1;
+  }
+
+  .logoWrapper {
+    order: 2;
+    flex: 1;
+    justify-content: center;
+  }
+
+  /* The ThemeToggle replaces the old dummy spacer to balance the header */
+  .themeToggleContainer {
+    order: 3;
+    width: 40px; 
+    justify-content: flex-end;
+  }
+
+  .searchContainer {
+    order: 4;
+    width: 100%;
+    flex-basis: 100%;
+  }
+}

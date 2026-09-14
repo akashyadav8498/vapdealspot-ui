@@ -1,0 +1,100 @@
+.pageContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.heroSection {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.mediaColumn {
+  flex: 0 0 40%;
+  max-width: 450px;
+}
+
+.infoColumn {
+  flex: 1;
+}
+
+.productIdentity {
+  margin-bottom: 2rem;
+}
+
+.brand {
+  color: var(--color-coral-600);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-family: var(--font-bricolage);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-slate-900);
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Not Found State */
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.notFoundContent {
+  text-align: center;
+  max-width: 400px;
+}
+
+.notFoundTitle {
+  font-family: var(--font-bricolage);
+  font-size: 2rem;
+  color: var(--color-slate-900);
+  margin-bottom: 1rem;
+}
+
+.notFoundMessage {
+  color: var(--color-slate-500);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1023px) {
+  .heroSection {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageContainer {
+    /* Mobile header is 2 rows tall (~100px); ensure content starts below it */
+    padding-top: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .heroSection {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mediaColumn {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

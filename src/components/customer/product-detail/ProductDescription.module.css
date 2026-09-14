@@ -1,0 +1,27 @@
+.container {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-slate-200);
+}
+
+.title {
+  font-family: var(--font-bricolage);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin-bottom: 1rem;
+}
+
+.content {
+  color: var(--color-slate-600);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
