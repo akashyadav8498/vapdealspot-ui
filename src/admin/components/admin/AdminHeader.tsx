@@ -1,6 +1,6 @@
 import { Menu, LogOut } from "lucide-react";
 import { Button } from "@/admin/components/ui/button";
-import { getCurrentRole, handleLogout } from "@/admin/lib/authService";
+import { handleLogout } from "@/admin/lib/authService";
 import { useNavigate } from "react-router-dom";
 
 type AdminHeaderProps = {

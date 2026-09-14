@@ -1,7 +1,7 @@
-import { useAudience } from '@/admin/lib/email/useAudience';
-import { ContactListTable } from '@/admin/components/admin/email/ContactListTable';
-import { AddContactForm } from '@/admin/components/admin/email/AddContactForm';
-import { CsvImportButton } from '@/admin/components/admin/email/CsvImportButton';
+import { useAudience } from '../../../lib/email/useAudience';
+import { ContactListTable } from '../../../components/admin/email/ContactListTable';
+import { AddContactForm } from '../../../components/admin/email/AddContactForm';
+import { CsvImportButton } from '../../../components/admin/email/CsvImportButton';
 
 export function AudienceListPage() {
   const { contacts, addContact, toggleSubscription, importContacts } = useAudience();
