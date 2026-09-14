@@ -56,7 +56,7 @@ export function AdminLayout() {
 
       {/* Mobile sidebar — Sheet drawer */}
       <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-        <SheetContent side="left" showCloseButton={true} className="w-60 p-0">
+        <SheetContent side="left" showCloseButton={true} className="admin-root w-60 p-0">
           <SheetTitle className="sr-only">Navigation</SheetTitle>
           <AdminSidebar onNavigate={() => setMobileOpen(false)} isCollapsed={false} />
         </SheetContent>
