@@ -11,18 +11,19 @@ import { BrandDetailPage } from './pages/customer/BrandDetailPage';
 import { BestOfPage } from './pages/customer/BestOfPage';
 
 // ── Admin Module (isolated under /admin/*) ──────────────────────────────────
-import { AdminLayout }          from './admin/layouts/AdminLayout';
-import { AdminDashboardPage }   from './admin/pages/admin/AdminDashboardPage';
-import { AdminProductsPage }    from './admin/pages/admin/AdminProductsPage';
-import { AdminProductFormPage } from './admin/pages/admin/AdminProductFormPage';
-import { AdminImportsPage }     from './admin/pages/admin/AdminImportsPage';
-import { CampaignListPage }       from './admin/pages/admin/campaigns/CampaignListPage';
-import { CampaignEditorPage }     from './admin/pages/admin/campaigns/CampaignEditorPage';
-import { CampaignReviewPage }     from './admin/pages/admin/campaigns/CampaignReviewPage';
-import { AudienceListPage }       from './admin/pages/admin/audience/AudienceListPage';
-import { AdminUsersPage }       from './admin/pages/admin/AdminUsersPage';
-import { LoginPage }            from './admin/pages/LoginPage';
-import { ProductProvider }      from './admin/lib/ProductContext';
+import { ConfigurationsLayout }          from './configurations/layouts/ConfigurationsLayout';
+import { ConfigurationsDashboardPage }   from './configurations/pages/ConfigurationsDashboardPage';
+import { ConfigurationsProductsPage }    from './configurations/pages/ConfigurationsProductsPage';
+import { ConfigurationsProductFormPage } from './configurations/pages/ConfigurationsProductFormPage';
+import { ConfigurationsImportsPage }     from './configurations/pages/ConfigurationsImportsPage';
+import { CampaignListPage }       from './configurations/pages/campaigns/CampaignListPage';
+import { CampaignEditorPage }     from './configurations/pages/campaigns/CampaignEditorPage';
+import { CampaignReviewPage }     from './configurations/pages/campaigns/CampaignReviewPage';
+import { AudienceListPage }       from './configurations/pages/audience/AudienceListPage';
+import { ConfigurationsUsersPage }       from './configurations/pages/ConfigurationsUsersPage';
+import { RolesPermissionsPage }   from './configurations/pages/RolesPermissionsPage';
+import { LoginPage }            from './configurations/pages/LoginPage';
+import { ProductProvider }      from './configurations/lib/ProductContext';
 // ────────────────────────────────────────────────────────────────────────────
 
 // Placeholder generic page
@@ -67,20 +68,21 @@ function App() {
         {/* ── Admin Module (Add-on, isolated) ── */}
         <Route path="/admin" element={
           <ProductProvider>
-            <AdminLayout />
+            <ConfigurationsLayout />
           </ProductProvider>
         }>
-          <Route index element={<AdminDashboardPage />} />
-          <Route path="products" element={<AdminProductsPage />} />
-          <Route path="products/new" element={<AdminProductFormPage />} />
-          <Route path="products/:id/edit" element={<AdminProductFormPage />} />
-          <Route path="imports" element={<AdminImportsPage />} />
+          <Route index element={<ConfigurationsDashboardPage />} />
+          <Route path="products" element={<ConfigurationsProductsPage />} />
+          <Route path="products/new" element={<ConfigurationsProductFormPage />} />
+          <Route path="products/:id/edit" element={<ConfigurationsProductFormPage />} />
+          <Route path="imports" element={<ConfigurationsImportsPage />} />
           <Route path="campaigns" element={<CampaignListPage />} />
           <Route path="campaigns/new" element={<CampaignEditorPage />} />
           <Route path="campaigns/:id/edit" element={<CampaignEditorPage />} />
           <Route path="campaigns/:id/review" element={<CampaignReviewPage />} />
           <Route path="audience" element={<AudienceListPage />} />
-          <Route path="users" element={<AdminUsersPage />} />
+          <Route path="users" element={<ConfigurationsUsersPage />} />
+          <Route path="roles" element={<RolesPermissionsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
